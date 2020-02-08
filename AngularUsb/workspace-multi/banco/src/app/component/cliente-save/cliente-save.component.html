@@ -1,0 +1,98 @@
+<div *ngIf="showMsg">
+  {{msg}}
+</div>
+<div class="container">
+  <br>
+  <!-- <form #clienteFomr="ngForm"> -->
+    <div class="card shadow mb-4"
+      style="border-radius: 10px; margin-top:10px ;width: 500px;margin: 0 auto; float: none;">
+
+      <div class="card-header py-3  text-center" style="background:black;border-radius: 5px">
+        <h5 class="m-0 font-weight-bold text-white">Guardar Cliente </h5>
+      </div>
+
+      <div class="card-body">
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Clie Id</h5>
+            <input type="text" [(ngModel)]="cliente.clieId" placeholder="Id">
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div>
+            <h5>Activo</h5>
+            <select name="activo" id="activo" [(ngModel)]="cliente.activo">
+              <option *ngFor="let activo of listaActivo">
+                {{activo.id}}
+              </option>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Tipo documento</h5>
+            <select name="tdocId" id="tdocId" [(ngModel)]="cliente.tdocId">
+              <option *ngFor="let tipoDocu of listaTipoDocument">
+                {{tipoDocu.tdocId}}
+              </option>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Direccion</h5>
+            <input type="text" [(ngModel)]="cliente.direccion">
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Email</h5>
+            <input type="text" [(ngModel)]="cliente.email">
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Telefono</h5>
+            <input type="text" [(ngModel)]="cliente.telefono">
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Fecha Creacion</h5>
+            <input type="text" [(ngModel)]="cliente.fechaCreacion">
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Fecha modificacion</h5>
+            <input type="text" [(ngModel)]="cliente.fechaModificacion">
+          </div>
+        </div>
+
+        <div class="row justify-content-center py-3">
+          <div>
+            <h5>Nombre</h5>
+            <input type="text" [(ngModel)]="cliente.nombre">
+          </div>
+        </div>
+
+          <div class="row justify-content-center">
+            <button class="btn btn-success" style="margin-top: 20px;width: 200px; border-radius: 10px" (click)="save()">
+              <h5>Save</h5>
+            </button>
+          </div>
+
+      </div>
+    </div>
+  <!-- </form> -->
+</div>

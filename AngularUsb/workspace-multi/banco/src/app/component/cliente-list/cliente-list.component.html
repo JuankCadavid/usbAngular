@@ -1,0 +1,13 @@
+<h2>Lista Clientes</h2>
+
+<li *ngFor="let cliente of listaCliente">
+
+    {{cliente.clieId}} {{cliente.nombre}}
+
+
+    <button class="btn btn-danger" [routerLink]="['/clienteEdit',cliente.clieId]">
+        Editar
+    </button>
+
+
+</li>

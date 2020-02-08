@@ -1,0 +1,11 @@
+<div class="card shadow mb-4 col-md-2"  style="position: fixed">
+    <div class="card-body">
+        <button class="btn btn-info" [routerLink]="['/cliente-list']" style="margin-bottom: 10px">Lista Clientes</button>
+        <br>
+        <button class="btn btn-info" [routerLink]="['/tipoDocomentoList']"  style="margin-bottom: 10px">Lista TipoDocumento</button>
+        <br>
+        <button class="btn btn-info" [routerLink]="['/clienteSave']">Save Cliente</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
